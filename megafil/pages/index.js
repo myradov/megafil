@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="">
         <div className="bg-gray-600">Hello Megafil</div>
       </main>
     </div>
