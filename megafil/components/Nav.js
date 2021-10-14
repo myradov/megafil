@@ -15,17 +15,17 @@ const Nav = () => {
 
     return (
         <>
-            <nav className="relative w-full h-16 bg-green-400 text-black">
-                <div id="menu" className="flex justify-evenly items-center bg-blue-500 md:bg-red-500 lg:bg-pink-500">
-                    <div id="logo">
+            <nav className="fixed z-10 w-full h-16 bg-green-400 text-black">
+                <div id="menu" className="relative w-full h-full flex justify-evenly items-center bg-blue-500 md:bg-red-500 lg:bg-pink-500">
+                    <div id="logo" className="bg-yellow-200">
                         <Link href="/">
                             <a>
                                 <Image src={logo} alt="Megafil Logo" width={40} height={40}/>
                             </a>
                         </Link>
                     </div>
-                    <ul id="menulist" className="hidden md:flex">
-                        <li>
+                    <ul id="menulist" className="hidden md:flex justify-center items-center w-1/2 bg-yellow-50">
+                        <li className="">
                             <Link href="/about">
                                 <a>About us</a>
                             </Link>
@@ -41,8 +41,8 @@ const Nav = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div id="locales" className="hidden md:block">
-                        <ul>
+                    <div id="locales" className="hidden md:block bg-yellow-400">
+                        <ul className="flex justify-between items-center">
                             <li>
                                 <Link href="#">
                                     <a>en</a>
@@ -68,8 +68,8 @@ const Nav = () => {
                         </Link>
                     </div>
                 </div>
-                <div id="sidenav" className={ sidebar ? "fixed w-full h-auto pt-16 bg-red-100" : "hidden"}>
-                    <ul id="menulist" className="flex md:hidden">
+                <div id="sidenav" className={ sidebar ? "fixed w-full h-auto z-10 bg-red-100" : "hidden"}>
+                    <ul id="menulist" className="flex flex-col justify-center items-center md:hidden">
                         <li>
                             <Link href="/about">
                                 <a>About us</a>

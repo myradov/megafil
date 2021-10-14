@@ -30,7 +30,7 @@ const MainLayout = ({children}) => {
                 <title>{siteTitle}</title>  
             </Head>
             <Nav />
-            <main className="relative pt-16">{children}</main>
+            <main className="relative pt-16 font-main">{children}</main>
             <Footer />
         </>
     )
