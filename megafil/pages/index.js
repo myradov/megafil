@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+
+import Img from '../public/main.jpg'
+import Img2 from '../public/main2.jpg'
 
 export default function Home() {
   return (
@@ -10,8 +14,43 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className="bg-gray-200" id="home">
-        <div className="bg-gray-600 h-screen">Hello Megafil</div>
+      <section className="relative block bg-gray-200" id="home">
+        <div className="bg-gray-500 relative h-screen flex justify-start items-center" id="intro">
+          <div className="relative z-10 p-12 w-2/3 h-full flex justify-center items-center bg-gray-400">
+            <div className="relative w-2/3 h-full flex flex-col justify-center items-start  text-left">
+              <h2 className="text-4xl font-bold my-2">Megafil Filters</h2>
+              <p className="text-lg my-1 w-full">
+                Never let the fear of failing discourage you from trying!
+              </p>
+            </div>
+          </div>
+          <div className="absolute block  w-4/12 z-10 right-36 top-0 h-full">
+            <Image src={Img}  layout="fill" className="absolute"/>
+          </div>
+        </div>
+
+        <div className="relative bg-gray-400 h-screen flex justify-start items-center overflow-hidden" id="about">
+          <div className="relative block w-4/12 z-10 left-36 top-0 h-full">
+            <Image src={Img2}  layout="fill" className="absolute"/>
+          </div>
+          <div className="absolute right-0 bottom-50 z-5 p-12 w-2/3 h-full flex justify-center items-center bg-gray-500">
+            <div className="relative w-2/3 h-full flex flex-col justify-center items-start bg-gray-500 text-left">
+              <h2 className="text-4xl font-bold my-2">About us</h2>
+              <p className="text-lg my-1 w-full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda!Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda!Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <Link href='/about'>
+                <a className="w-32 text-center mt-2 h-auto py-2 px-3 whitespace-nowrap border bottom-0 rounded-md">Read more</a>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div id="products">
+
+        </div>
+
       </section>
     </div>
 

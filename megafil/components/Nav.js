@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import logo from '../public/vercel.svg'
 import close from '../public/close.svg'
@@ -13,49 +13,65 @@ const Nav = () => {
     const [sidebar, setSidebar] = useState(false)
     const showSidebar = () => setSidebar(!sidebar)
 
+    const [menuBg, setMenuBg] = useState('bg-transparent')
+
+    const handleScroll = (e) => {
+        window.pageYOffset > 1600 ? setMenuBg('bg-pink-300'): setMenuBg('bg-transparent')
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => removeEventListener('scroll', handleScroll)
+    },[])
+
     return (
         <>
-            <nav className="fixed z-10 w-full h-16 bg-green-400 text-black">
-                <div id="menu" className="relative w-full h-full flex justify-evenly items-center bg-blue-500 md:bg-red-500 lg:bg-pink-500">
-                    <div id="logo" className="bg-yellow-200">
+            <nav className="fixed z-20 w-full h-16  text-black font-main">
+                <div id="menu" className={`relative w-full h-full px-8 flex justify-between items-center bg-blue-500 md:bg-red-500 lg:${menuBg}`}>
+                    <div id="logo" className="block w-14 h-14 md:w-20 md:h-20">
                         <Link href="/">
-                            <a>
-                                <Image src={logo} alt="Megafil Logo" width={40} height={40}/>
+                            <a className="block w-full h-full"> 
+                                <Image src={logo} alt="Megafil Logo" width={500} height={500}/>
                             </a>
                         </Link>
                     </div>
-                    <ul id="menulist" className="hidden md:flex justify-center items-center w-1/2 bg-yellow-50">
-                        <li className="">
+                    <ul id="menulist" className="hidden md:flex justify-between items-center w-1/3 h-full">
+                        <li className="block">
                             <Link href="/about">
-                                <a>About us</a>
+                                <a className="block py-3 px-4 hover:text-green-400">About us</a>
                             </Link>
                         </li>
-                        <li>
+                        <li className="p-2">
                             <Link href="/services">
-                                <a>Services</a>
+                                <a className="block py-3 px-4 hover:text-green-400">Services</a>
                             </Link>
                         </li>
-                        <li>
+                        <li className="p-2">
+                            <Link href="/products">
+                                <a className="block py-3 px-4 hover:text-green-400">Products</a>
+                            </Link>
+                        </li>
+                        <li className="p-2">
                             <Link href="/contacts">
-                                <a>Contacts</a>
+                                <a className="block py-3 px-4 hover:text-green-400">Contacts</a>
                             </Link>
                         </li>
                     </ul>
-                    <div id="locales" className="hidden md:block bg-yellow-400">
-                        <ul className="flex justify-between items-center">
-                            <li>
+                    <div id="locales" className="hidden md:block uppercase text-xs z-20">
+                        <ul className="flex justify-between items-center divide-x-2 > * divide-solid divide-black ">
+                            <li className="">
                                 <Link href="#">
-                                    <a>en</a>
+                                    <a className="block py-1 px-2 hover:text-white">en</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="#">
-                                    <a>ru</a>
+                                    <a className="block py-1 px-2 hover:text-white">ru</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="#">
-                                    <a>tm</a>
+                                    <a className="block py-1 px-2 hover:text-white">tm</a>
                                 </Link>
                             </li>
                         </ul>
