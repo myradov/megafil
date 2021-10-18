@@ -7,6 +7,8 @@ import Img2 from '../public/main2.jpg'
 import Air from '../public/air.jpg'
 import Cabin from '../public/cabin.jpg'
 import Oil from '../public/oil.jpg'
+import appImg from '../public/app.jpeg'
+import vercel from '../public/vercel.svg'
 
 export default function Home() {
   return (
@@ -52,13 +54,12 @@ export default function Home() {
 
         <section className="relative block bg-gray-200 w-full h-auto py-3 my-4" id="products">
           <header className="relative block w-full h-auto py-4">
-            <h1 className="text-center font-black text-4xl">Explore Our Products</h1>
+            <h1 className="text-center font-bold text-4xl py-2">Explore Our Products</h1>
           </header>
           <div className="w-full h-96 flex justify-evenly items-center max-w-screen-xl mx-auto bg-gray-200">
             <article className="w-1/3 h-full m-1 relative flex justify-center items-center bg-gray-200">
               <Image src={Air} layout="fill" objectFit="cover" className="h-full"/> 
               <div className="w-full h-full relative text-black flex flex-col justify-start items-center pt-10 bg-gray-700 bg-opacity-25 hover:bg-white hover:bg-opacity-10">
-                <h4 className="block text-base uppercase font-bold py-1">products</h4>
                 <h1 className="block text-4xl py-1 font-black">Air filters</h1> 
                 <p className="block text-md py-1">Reliable, long-lasting, durable</p>
                 <Link href="#">
@@ -69,7 +70,6 @@ export default function Home() {
             <article className="w-1/3 h-full m-1 relative flex justify-center items-center bg-gray-200">
               <Image src={Oil} layout="fill" objectFit="cover" className="h-full"/> 
               <div className="w-full h-full relative text-black flex flex-col justify-start items-center pt-10 bg-gray-700 bg-opacity-25 hover:bg-white hover:bg-opacity-10">
-                <h4 className="block text-base uppercase font-bold py-1">products</h4>
                 <h1 className="block text-4xl py-1 font-black">Oil filters</h1> 
                 <p className="block text-md py-1">Reliable, long-lasting, durable</p>
                 <Link href="#">
@@ -80,19 +80,56 @@ export default function Home() {
             <article className="w-1/3 h-full m-1 relative flex justify-center items-center bg-gray-200">
               <Image src={Cabin} layout="fill" objectFit="cover" className="h-full"/> 
               <div className="w-full h-full relative text-black flex flex-col justify-start items-center pt-10 bg-gray-700 bg-opacity-25 hover:bg-white hover:bg-opacity-10">
-                <h4 className="block text-base uppercase font-bold py-1">products</h4>
                 <h1 className="block text-4xl py-1 font-black">Cabin filters</h1> 
                 <p className="block text-md py-1">Reliable, long-lasting, durable</p>
-                <Link href="#">
+                <Link href="/contacts">
                   <a className="block text-md py-2 px-3 mt-5 bg-white rounded-md shadow-md uppercase hover:text-green-500">Learn more</a>
                 </Link>
               </div>
             </article>
           </div>
         </section>
-
+        <section id="app" className="relative block w-full h-auto bg-blue-400">
+          <article className="w-full h-auto relative flex flex-col justify-center items-center bg-gray-200">
+            <div className="w-full h-auto relative flex justify-center items-center py-4">
+              <h1 className="text-center font-bold text-4xl py-2">
+                Check out our application
+              </h1>
+            </div>
+            <div className="relative w-2/4 h-auto">
+              <Image src={appImg} layout="responsive" sizes="100%" className="h-full"/> 
+            </div>
+            <div className="block relative w-2/4 max-w-screen-md">
+              <ul className="w-full flex justify-between items-center bg-gray-600">
+                <li className="cursor-pointer w-2/5 h-20">
+                  
+                  <Link href="#">
+                    <a>
+                    <Image src={vercel}/>
+                    </a>
+                  </Link>
+                </li>
+                <li className="cursor-pointer">
+                  <Image src={vercel}/>
+                  <Link href="#">
+                    <a>
+                      Android
+                    </a>
+                  </Link>
+                </li>
+                <li className="cursor-pointer">
+                  <Image src={vercel}/>
+                  <Link href="#">
+                    <a>
+                      Windows
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
       </section>
     </div>
-
   )
 }
