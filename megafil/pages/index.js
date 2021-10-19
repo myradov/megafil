@@ -8,7 +8,11 @@ import Air from '../public/air.jpg'
 import Cabin from '../public/cabin.jpg'
 import Oil from '../public/oil.jpg'
 import appImg from '../public/app.jpeg'
-import vercel from '../public/vercel.svg'
+import megafil from '../public/megafil_app.png'
+
+import apple from '../public/apple.svg'
+import android from '../public/android.svg'
+import windows from '../public/windows.svg'
 
 export default function Home() {
   return (
@@ -20,13 +24,21 @@ export default function Home() {
       </Head>
 
       <section className="relative block bg-gray-200" id="home">
-        <section className="bg-gray-500 relative h-screen flex justify-start items-center" id="intro">
-          <div className="relative z-10 p-12 w-2/3 h-full flex justify-center items-center bg-gray-400">
-            <div className="relative w-2/3 h-full flex flex-col justify-center items-start  text-left">
-              <h2 className="text-4xl font-bold my-2">Megafil Filters</h2>
+        <section className="bg-gray-400 relative h-screen flex justify-start items-center" id="intro">
+          <div className="relative z-10 px-12 w-2/3 h-full flex flex-col justify-center items-center bg-white">
+            <div className="relative w-2/3 h-auto flex flex-col justify-center items-start  text-left">
+              <h1 className="text-5xl font-bold my-2 uppercase">Megafil Filters</h1>
               <p className="text-lg my-1 w-full">
                 Never let the fear of failing discourage you from trying!
               </p>
+            </div>
+            <div className="relative w-2/3 h-auto flex justify-start items-center mt-4" id="btns">
+              <Link href="#">
+                <a className="text-lg px-4 py-2 bg-gray-300  rounded-md mr-3 shadow-md">Contact us</a>
+              </Link>
+              <Link href="#">
+                <a className="animate-pulse  text-lg px-4 py-2 bg-green-300  rounded-md mr-3 shadow-md">Download our app</a>
+              </Link>
             </div>
           </div>
           <div className="absolute block  w-4/12 z-10 right-36 top-0 h-full">
@@ -34,14 +46,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative bg-gray-400 h-screen flex justify-start items-center overflow-hidden" id="about">
+        <section className="relative bg-white h-screen flex justify-start items-center overflow-hidden" id="about">
           <div className="relative block w-4/12 z-10 left-36 top-0 h-full">
             <Image src={Img2}  layout="fill" className="absolute"/>
           </div>
-          <div className="absolute right-0 bottom-50 z-5 p-12 w-2/3 h-full flex justify-center items-center bg-gray-500">
-            <div className="relative w-2/3 h-full flex flex-col justify-center items-start bg-gray-500 text-left">
-              <h2 className="text-4xl font-bold my-2">About us</h2>
-              <p className="text-lg my-1 w-full">
+          <div className="absolute right-0 bottom-50 z-5 p-12 w-2/3 h-full flex justify-center items-center bg-gray-400">
+            <div className="relative w-2/3 h-full flex flex-col justify-center items-start text-left">
+              <h2 className="text-5xl font-bold my-2 uppercase">About us</h2>
+              <p className="text-lg my-2 w-full">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda!Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda!Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda!Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
@@ -90,43 +102,59 @@ export default function Home() {
           </div>
         </section>
         <section id="app" className="relative block w-full h-auto bg-blue-400">
-          <article className="w-full h-auto relative flex flex-col justify-center items-center bg-gray-200">
-            <div className="w-full h-auto relative flex justify-center items-center py-4">
-              <h1 className="text-center font-bold text-4xl py-2">
+          <article className="w-full h-auto relative flex flex-col justify-center items-center bg-gray-200 py-8">
+            <div className="w-full h-auto relative flex justify-center items-center mb-12">
+              <h1 className="text-center font-bold text-5xl py-2">
                 Check out our application
               </h1>
             </div>
-            <div className="relative w-2/4 h-auto">
-              <Image src={appImg} layout="responsive" sizes="100%" className="h-full"/> 
-            </div>
-            <div className="block relative w-2/4 max-w-screen-md">
-              <ul className="w-full flex justify-between items-center bg-gray-600">
-                <li className="cursor-pointer w-2/5 h-20">
-                  
-                  <Link href="#">
-                    <a>
-                    <Image src={vercel}/>
-                    </a>
-                  </Link>
-                </li>
-                <li className="cursor-pointer">
-                  <Image src={vercel}/>
-                  <Link href="#">
-                    <a>
-                      Android
-                    </a>
-                  </Link>
-                </li>
-                <li className="cursor-pointer">
-                  <Image src={vercel}/>
-                  <Link href="#">
-                    <a>
-                      Windows
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <section className="w-full h-auto flex justify-center items-start max-w-screen-lg">
+              <div className="relative w-1/4 h-auto mr-8">
+                <Image src={megafil} layout="responsive" sizes="100%" className="h-full"/> 
+              </div>
+              <div className="block relative w-2/4 h-auto">
+                <div>
+                  <h1 className="block text-3xl w-full">Megafil Filter <br></br>Made in Turkmenistan</h1>
+                  <p className="text-md w-2/3 py-8">
+                  First and largest filter factory of Turkmenistan.
+                  Air filter, oil filter, fuel filter
+                  and cabin air filter.
+                  </p>
+                </div>
+                <ul className="w-full flex justify-between items-start">
+                  <li className="cursor-pointer w-full h-auto bg-gray-300 mr-1 rounded-md shadow-md transition duration-500 ease-in-out  hover:shadow-sm">
+                    <Link href="#">
+                      <a className="relative block w-full h-auto">
+                        <div className="relative flex flex-col justify-center items-center p-2">
+                          <Image src={apple} width={50} height={50}/>
+                          <h3 className="mt-2">Apple Store</h3>
+                        </div>
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="cursor-pointer w-full h-auto bg-gray-300 mr-1 rounded-md shadow-md transition duration-500 ease-in-out  hover:shadow-sm">
+                    <Link href="#">
+                      <a className="relative block w-full h-auto">
+                        <div className="relative flex flex-col justify-center items-center p-2">
+                          <Image src={android} width={50} height={50}/>
+                          <h3 className="mt-2">Play Market</h3>
+                        </div>
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="cursor-pointer w-full h-auto bg-gray-300 rounded-md shadow-md transition duration-500 ease-in-out  hover:shadow-sm">
+                    <Link href="#">
+                      <a className="relative block w-full h-auto">
+                        <div className="relative flex flex-col justify-center items-center p-2">
+                          <Image src={windows} width={50} height={50}/>
+                          <h3 className="mt-2">Windows Store</h3>
+                        </div>
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </article>
         </section>
       </section>

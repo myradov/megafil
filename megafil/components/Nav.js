@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
-import logo from '../public/vercel.svg'
+import logo from '../public/megafil_logo.png'
 import close from '../public/close.svg'
 import hamburger from '../public/hamburger.svg'
 
@@ -16,7 +16,7 @@ const Nav = () => {
     const [menuBg, setMenuBg] = useState('bg-transparent')
 
     const handleScroll = (e) => {
-        window.pageYOffset > 1600 ? setMenuBg('bg-pink-300'): setMenuBg('bg-transparent')
+        window.pageYOffset > 600 ? setMenuBg('bg-white shadow-md'): setMenuBg('bg-transparent')
     }
 
     useEffect(() => {
@@ -28,10 +28,10 @@ const Nav = () => {
         <>
             <nav className="fixed z-20 w-full h-16  text-black font-main">
                 <div id="menu" className={`relative w-full h-full px-8 flex justify-between items-center bg-blue-500 md:bg-red-500 lg:${menuBg}`}>
-                    <div id="logo" className="block w-14 h-14 md:w-20 md:h-20">
+                    <div id="logo" className="relative block w-14 h-10 md:w-28 md:h-10">
                         <Link href="/">
                             <a className="block w-full h-full"> 
-                                <Image src={logo} alt="Megafil Logo" width={500} height={500}/>
+                                <Image src={logo} alt="Megafil Logo" layout="fill" sizes="100%"/>
                             </a>
                         </Link>
                     </div>
