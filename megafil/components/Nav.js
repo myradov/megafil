@@ -38,7 +38,7 @@ const Nav = () => {
                     <ul id="menulist" className="hidden md:flex justify-between items-center w-1/3 h-full">
                         <li className="block">
                             <Link href="/about">
-                                <a className="block py-3 px-4 hover:text-green-400">About us</a>
+                                <a className="block py-3 px-4 hover:text-green-400 whitespace-nowrap">About us</a>
                             </Link>
                         </li>
                         <li className="p-2">
@@ -49,6 +49,11 @@ const Nav = () => {
                         <li className="p-2">
                             <Link href="/products">
                                 <a className="block py-3 px-4 hover:text-green-400">Products</a>
+                            </Link>
+                        </li>
+                        <li className="p-2">
+                            <Link href="/news">
+                                <a className="block py-3 px-4 hover:text-green-400">News</a>
                             </Link>
                         </li>
                         <li className="p-2">
@@ -94,6 +99,11 @@ const Nav = () => {
                         <li>
                             <Link href="/services">
                                 <a>Services</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/news">
+                                <a>News</a>
                             </Link>
                         </li>
                         <li>
