@@ -3,8 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import postImg from '../public/app.jpeg'
-import postImg2 from '../public/main.jpg'
-import postImg3 from '../public/main2.jpg'
+import postImg2 from '../public/news1.jpg'
+import postImg3 from '../public/news2.jpg'
 
 const News = () => {
     return (
@@ -20,7 +20,7 @@ const News = () => {
                             <Link href="#">
                                 <a className="flex flex-col justify-center items-start">
                                     <div className="block relative w-full h-auto rounded-md">
-                                        <Image src={postImg} width={400} height={320} layout="responsive" className="rounded-md"/>
+                                        <Image src={postImg} width={600} height={390} layout="responsive" className="rounded-md"/>
                                     </div>
                                     <div className="relative flex flex-col justify-center items-start px-2">
                                         <h2 className="text-lg font-bold mb-1">Title of the post</h2>
@@ -33,7 +33,7 @@ const News = () => {
                             <Link href="#">
                                 <a className="flex flex-col justify-center items-start">
                                     <div className="block relative w-full h-auto rounded-md">
-                                        <Image src={postImg2} width={400} height={320} layout="responsive" className="rounded-md"/>
+                                        <Image src={postImg2} width={600} height={390} layout="responsive" className="rounded-md"/>
                                     </div>
                                     <div className="relative flex flex-col justify-center items-start px-2">
                                         <h2 className="text-lg font-bold mb-1">Title of the post</h2>
@@ -46,7 +46,7 @@ const News = () => {
                             <Link href="#">
                                 <a className="flex flex-col justify-center items-start">
                                     <div className="block relative w-full h-auto rounded-md">
-                                        <Image src={postImg3} width={400} height={320} layout="responsive" className="rounded-md"/>
+                                        <Image src={postImg3} width={600} height={390} layout="responsive" className="rounded-md"/>
                                     </div>
                                     <div className="relative flex flex-col justify-center items-start px-2">
                                         <h2 className="text-lg font-bold mb-1">Title of the post</h2>
@@ -59,7 +59,7 @@ const News = () => {
                             <Link href="#">
                                 <a className="flex flex-col justify-center items-start">
                                     <div className="block relative w-full h-auto rounded-md">
-                                        <Image src={postImg} width={400} height={320} layout="responsive" className="rounded-md"/>
+                                        <Image src={postImg} width={600} height={390} layout="responsive" className="rounded-md"/>
                                     </div>
                                     <div className="relative flex flex-col justify-center items-start px-2">
                                         <h2 className="text-lg font-bold mb-1">Title of the post</h2>
@@ -72,7 +72,7 @@ const News = () => {
                             <Link href="#">
                                 <a className="flex flex-col justify-center items-start">
                                     <div className="block relative w-full h-auto rounded-md">
-                                        <Image src={postImg} width={400} height={320} layout="responsive" className="rounded-md"/>
+                                        <Image src={postImg} width={600} height={390} layout="responsive" className="rounded-md"/>
                                     </div>
                                     <div className="relative flex flex-col justify-center items-start px-2">
                                         <h2 className="text-lg font-bold mb-1">Title of the post</h2>

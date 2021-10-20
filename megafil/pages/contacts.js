@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Img from '../public/main2.jpg'
+import Img from '../public/contactus.jpg'
 import Fb from '../public/fb.svg'
 import In from '../public/in.svg'
 

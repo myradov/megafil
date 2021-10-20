@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import App from '../public/main.jpg'
+import AboutImg from '../public/aboutus.jpg'
 import partners from '../public/vercel.svg'
 import hengst from '../public/hengst.svg'
 import mann from '../public/mann.svg'
@@ -26,7 +26,7 @@ const About = () => {
                 <main className="relative w-full h-auto flex flex-col justify-center items-center">
                     <article className="relative w-full h-screen flex justify-center items-end bg-gray-200">
                         <div className="relative w-1/3 h-full overflow-hidden">
-                            <Image src={App} layout="fill" sizes="100%"/>
+                            <Image src={AboutImg} layout="fill" sizes="100%"/>
                         </div>
                         <div className="relative flex flex-1 flex-col justify-center items-center h-full text-center px-4 pt-4  bg-opacity-75">
                             <div className="relative flex justify-start items-start text-left mb-10 divide-x-4 divide-solid divide-black">
