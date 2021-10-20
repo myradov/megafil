@@ -27,7 +27,7 @@ const Nav = () => {
     return (
         <>
             <nav className="fixed z-20 w-full h-16  text-black font-main">
-                <div id="menu" className={`relative w-full h-full px-8 flex justify-between items-center bg-blue-500 md:bg-red-500 lg:${menuBg}`}>
+                <div id="menu" className={`relative w-full h-full px-8 flex justify-between items-center ${menuBg} md:${menuBg} lg:${menuBg}`}>
                     <div id="logo" className="relative block w-14 h-10 md:w-28 md:h-10">
                         <Link href="/">
                             <a className="block w-full h-full"> 
